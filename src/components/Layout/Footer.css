@@ -1,0 +1,72 @@
+
+body{
+    width: 100%;
+
+}
+
+  .footerImg{
+    background: url(../../assets/footer-banner.png) no-repeat;
+    background-size: contain;
+    height: 50vh;
+
+
+  }
+
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    
+  }
+  
+  .company-info {
+    flex: 2;
+    margin-right: 2rem;
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .social-icons a {
+    color: #333;
+    font-size: 1.2rem;
+  }
+  
+  .footer-section {
+    flex: 1;
+  }
+  
+  .footer-section h3 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .footer-section ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .footer-section li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .footer-section a {
+    color: #666;
+    text-decoration: none;
+  }
+  
+  @media (max-width: 768px) {
+    .footer-content {
+      flex-direction: column;
+    }
+    
+    .footer-section {
+      margin-top: 2rem;
+    }
+  }
