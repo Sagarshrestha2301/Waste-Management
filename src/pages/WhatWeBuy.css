@@ -1,0 +1,79 @@
+.what-we-buy {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+
+}
+
+
+.what-we-buy h1 {
+  color: #00a86b;
+  text-align: center;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.what-we-buy .categories {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.what-we-buy .categories button {
+  background: none;
+  border: none;
+  padding: 10px 15px;
+  margin: 0 10px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #666;
+  transition: color 0.3s ease-out;
+}
+
+.what-we-buy .categories button.active {
+  color: #00a86b;
+  border-bottom: 2px solid #00a86b;
+}
+
+.what-we-buy .items-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.what-we-buy .item-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  padding: 20px;
+  text-align: center;
+  transition: box-shadow 0.3s ease-out;
+}
+
+.what-we-buy .item-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.what-we-buy .item-card img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.what-we-buy .item-card h3 {
+  color: #00a86b;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+}
+
+.what-we-buy .item-card .price {
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 1.1em;
+}
+
+.what-we-buy .item-card .description {
+  color: #666;
+  font-size: 0.9em;
+  line-height: 1.4;
+}

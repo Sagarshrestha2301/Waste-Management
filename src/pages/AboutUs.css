@@ -1,0 +1,84 @@
+/* AboutUs.css */
+.main{
+  background: linear-gradient(to right, #008B8B, #017B7B, #00563B);
+  
+}
+.about-us {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  
+}
+
+.about-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.about-header h1 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.about-header p {
+  font-size: 1.2rem;
+  
+  color: #34495e;
+}
+
+.mission-section,
+.our-mission,
+.community-impact,
+.vision {
+  background: #fff;
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: justify;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+}
+
+.mission-section h2,
+.our-mission h2,
+.community-impact h2,
+.vision h2 {
+  font-size: 2rem;
+  color: #27ae60;
+  margin-bottom: 10px;
+}
+
+.mission-section p,
+.our-mission p,
+.community-impact p,
+.vision p {
+  font-size: 1rem;
+  color: #7f8c8d;
+  margin-bottom: 10px;
+}
+
+@media (min-width: 768px) {
+  .about-header h1 {
+    font-size: 3rem;
+  }
+
+  .about-header p {
+    font-size: 1.5rem;
+  }
+
+  .mission-section h2,
+  .our-mission h2,
+  .community-impact h2,
+  .vision h2 {
+    font-size: 2.5rem;
+  }
+
+  .mission-section p,
+  .our-mission p,
+  .community-impact p,
+  .vision p {
+    font-size: 1.2rem;
+  }
+}
