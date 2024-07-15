@@ -9,16 +9,18 @@ import WhyWastix from "./WhyWastix";
 import Testimonials from "../components/testimonials";
 
 const Home = () => {
-  return <>
-    <div className="frontPage">
-      <Header />
-    </div>
-    <WhyWastix />
+  return (
+    <>
+      <div className="frontPage">
+        <Header />
+      </div>
+      <WhyWastix />
       <HowItWorks />
       <WhatWeBuy />
       <Testimonials />
       <Footer />
     </>
+  );
 };
 
 export default Home;

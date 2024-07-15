@@ -1,6 +1,8 @@
 import React from "react";
 import "./AboutUs.css";
 import Header from "../components/Layout/Header";
+import Footer from "../components/Layout/Footer";
+
 
 const AboutUs = () => {
   return (
@@ -10,6 +12,8 @@ const AboutUs = () => {
         <div className="about-us">
           <header className="about-header">
             <h1>About Wastix Recyclers</h1>
+        <hr />
+        <br />
             <p>Leading the way in sustainable waste management solutions</p>
           </header>
 
@@ -87,6 +91,56 @@ const AboutUs = () => {
           </section>
         </div>
       </div>
+
+      <section className="waste-management-images">
+            <h2>Our Waste Management Initiatives</h2>
+            <div className="image-grid">
+              <div className="image-item">
+                <img src="../../public/assets/service-1.jpg" alt="Recycling Center" />
+                <p>Our state-of-the-art recycling center</p>
+              </div>
+              <div className="image-item">
+                <img src="../../public/assets/service-2.jpg" alt="Community Cleanup" />
+                <p>Community cleanup initiative</p>
+              </div>
+              <div className="image-item">
+                <img src="../../public/assets/service-3.jpg" alt="Waste Segregation" />
+                <p>Proper waste segregation in action</p>
+              </div>
+              <div className="image-item">
+                <img src="../../public/assets/service-4.jpg" alt="Awareness Workshop" />
+                <p>Conducting waste management awareness workshops</p>
+              </div>
+            </div>
+          </section>
+
+      <section className="team-section">
+  <h2>Our Team</h2>
+  <div className="team-grid">
+    <div className="team-member">
+      <div className="member-image">
+        <img src="../../public/assets/person2.png" alt="Team Member 1" />
+      </div>
+      <h3>John Doe</h3>
+      <p>Founder & CEO</p>
+    </div>
+    <div className="team-member">
+      <div className="member-image">
+        <img src="../../public/assets/person1.png" alt="Team Member 2" />
+      </div>
+      <h3>Jane Smith</h3>
+      <p>Head of Operations</p>
+    </div>
+    <div className="team-member">
+      <div className="member-image">
+        <img src="../../public/assets/person3.png" alt="Team Member 3" />
+      </div>
+      <h3>Mike Johnson</h3>
+      <p>Lead Recycling Specialist</p>
+    </div>
+  </div>
+</section>
+      <Footer/>
     </>
   );
 };

@@ -1,7 +1,14 @@
-.frontPage{
-    background: url(../assets/back.jpg) no-repeat;
-    background-size: cover;
-    height: 100vh;
-    position: relative;
+.frontPage {
+  background: url(../../public/assets/back.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  position: relative;
+}
 
+@media (max-width: 768px) {
+  .frontPage {
+    height: auto;
+    min-height: 50vh;
   }
+}

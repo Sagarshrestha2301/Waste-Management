@@ -35,7 +35,8 @@ const Footer = () => {
             <li><a href="#">Shredding</a></li>
             <li><a href="#">Composting</a></li>
             <li><a href="#">E-waste</a></li>
-            <li><a href="#">Tours and Workshops</a></li>
+            <li><a href="#">Waste Pick-Up</a></li>
+            <li><a href="#">Construction and Demolition Waste</a></li>
           </ul>
         </div>
         
