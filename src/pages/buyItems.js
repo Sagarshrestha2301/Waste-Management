@@ -2,6 +2,7 @@ export const categories = [
   "Paper", "Glass and Plastic", "Metal & Steel", "E-waste", "Others", "Brass"
 ];
 
+
 export const items = [
   // Paper
   {
