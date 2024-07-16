@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './Login.css';
 import Header from '../components/Layout/Header';
 
-const AuthForm = () => {
+const Login = () => {
   const [isLogin, setIsLogin] = useState(true);
   const [formData, setFormData] = useState({
     username: '',
@@ -104,4 +104,4 @@ const AuthForm = () => {
           </>
 };
 
-export default AuthForm;
+export default Login;

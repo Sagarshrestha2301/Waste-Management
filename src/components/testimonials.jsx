@@ -3,7 +3,7 @@ import { FaStar, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import './Testimonials.css';
 
 const Testimonial = ({ name, role, image, rating, text }) => (
-  <div className="bg-white p-6 rounded-lg shadow-md text-center testimonial-card">
+  <div className="bg-white p-12  rounded-2re shadow-md text-center testimonial-card">
     <div className="flex justify-center mb-4">
       {[...Array(5)].map((_, i) => (
         <FaStar
@@ -97,7 +97,8 @@ const Testimonials = () => {
   return (
     <section className="py-16 testimonials-section">
       <div className="container mx-auto px-4">
-        <h1 className="text-center text-[#00a86b] text-5xl font-semibold mb-2 animate-fadeIn">
+
+        <h1 className="text-center text-[#00a86b] text-5xl font-semibold mb-2 animate-fadeIn  ">
           Testimonials
         </h1>
         <br />
