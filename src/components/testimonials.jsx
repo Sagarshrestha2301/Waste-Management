@@ -1,25 +1,18 @@
 import React, { useState, useEffect } from "react";
 import { FaStar, FaChevronLeft, FaChevronRight } from "react-icons/fa";
-import './Testimonials.css';
+import "./Testimonials.css";
 
 const Testimonial = ({ name, role, image, rating, text }) => (
-  <div className="bg-white p-12  rounded-2re shadow-md text-center testimonial-card">
-    <div className="flex justify-center mb-4">
+  <div className="testimonial-card">
+    <div className="star-rating">
       {[...Array(5)].map((_, i) => (
-        <FaStar
-          key={i}
-          className={i < rating ? "text-yellow-400" : "text-gray-300"}
-        />
+        <FaStar key={i} className={i < rating ? "star-filled" : "star-empty"} />
       ))}
     </div>
-    <p className="text-gray-600 mb-4">{text}</p>
-    <img
-      src={image}
-      alt={name}
-      className="w-16 h-16 rounded-full mx-auto mb-2"
-    />
-    <h3 className="font-bold">{name}</h3>
-    <p className="text-sm text-gray-500">{role}</p>
+    <p className="testimonial-text">{text}</p>
+    <img src={image} alt={name} className="testimonial-image" />
+    <h3 className="testimonial-name">{name}</h3>
+    <p className="testimonial-role">{role}</p>
   </div>
 );
 
@@ -67,14 +60,20 @@ const Testimonials = () => {
   const nextTestimonial = () => {
     if (!isAnimating) {
       setIsAnimating(true);
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % (testimonials.length - 2));
+      setCurrentIndex(
+        (prevIndex) => (prevIndex + 1) % (testimonials.length - 2)
+      );
     }
   };
 
   const prevTestimonial = () => {
     if (!isAnimating) {
       setIsAnimating(true);
-      setCurrentIndex((prevIndex) => (prevIndex - 1 + (testimonials.length - 2)) % (testimonials.length - 2));
+      setCurrentIndex(
+        (prevIndex) =>
+          (prevIndex - 1 + (testimonials.length - 2)) %
+          (testimonials.length - 2)
+      );
     }
   };
 
@@ -95,46 +94,34 @@ const Testimonials = () => {
   }, [currentIndex]);
 
   return (
-    <section className="py-16 testimonials-section">
-      <div className="container mx-auto px-4">
+    <section className="testimonials">
+      <h2 className="testimonials-title">Testimonials</h2>
+      <hr />
+      <br />
+      <h3 className="testimonials-subtitle">
+        What our clients say about Wastix
+      </h3>
 
-        <h1 className="text-center text-[#00a86b] text-5xl font-semibold mb-2 animate-fadeIn  ">
-          Testimonials
-        </h1>
-        <br />
-        <hr className="animate-scaleIn" />
-        <br />
-        <h3 className="text-center text-3xl font-bold mb-12 animate-fadeIn">
-          What our clients say about Wastix
-        </h3>
-
-        <div className="relative overflow-hidden">
-          <div 
-            className="flex transition-transform duration-500 ease-in-out"
-            style={{ transform: `translateX(-${currentIndex * 33.333}%)` }}
-          >
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="w-1/3 flex-shrink-0 px-2">
-                <Testimonial {...testimonial} />
-              </div>
-            ))}
-          </div>
+      <div className="testimonials-carousel">
+        <div
+          className="testimonials-slider"
+          style={{ transform: `translateX(-${currentIndex * 33.333}%)` }}
+        >
+          {testimonials.map((testimonial, index) => (
+            <div key={index} className="testimonial-slide">
+              <Testimonial {...testimonial} />
+            </div>
+          ))}
         </div>
+      </div>
 
-        <div className="flex justify-center mt-8">
-          <button
-            onClick={prevTestimonial}
-            className="mx-2 p-2 rounded-full bg-white shadow-md hover:bg-gray-100 transition-colors duration-300"
-          >
-            <FaChevronLeft className="text-gray-600" />
-          </button>
-          <button
-            onClick={nextTestimonial}
-            className="mx-2 p-2 rounded-full bg-white shadow-md hover:bg-gray-100 transition-colors duration-300"
-          >
-            <FaChevronRight className="text-gray-600" />
-          </button>
-        </div>
+      <div className="testimonials-nav">
+        <button onClick={prevTestimonial} className="nav-button">
+          <FaChevronLeft className="nav-icon" />
+        </button>
+        <button onClick={nextTestimonial} className="nav-button">
+          <FaChevronRight className="nav-icon" />
+        </button>
       </div>
     </section>
   );
