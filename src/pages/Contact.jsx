@@ -43,7 +43,7 @@ const Contact = () => {
                 </iframe>
               </div>
             </div>
-            <div className="contact-form lg:w-2/3">
+            <div className="contact-form ">
               <form className="max-w-md mx-auto shadow-box">
                 <div className="mb-4">
                   <label htmlFor="name" className="block mb-2">Your Name</label>

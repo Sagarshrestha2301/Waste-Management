@@ -6,8 +6,8 @@
 .contact-header {
   position: relative;
   text-align: center;
-  color: white;
-  height: 300px;
+  color: black;
+  height: 200px;
   background: url('/path-to-your-header-background-image.jpg') no-repeat center center;
   background-size: cover;
   overflow: hidden;
@@ -82,7 +82,7 @@
 
 .contact-form {
   flex: 1;
-  min-width: 300px;
+  width: 600px;
   padding: 0 2rem;
   animation: fadeInRight 1s ease-out;
 }

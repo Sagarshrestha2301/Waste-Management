@@ -23,20 +23,19 @@ const Footer = () => {
         <div className="footer-section">
           <h3>OUR COMPANY</h3>
           <ul>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Careers</a></li>
+            <li><a href="/About">About Us</a></li>
+            <li><a href="/blog">Blog</a></li>
           </ul>
         </div>
         
         <div className="footer-section">
           <h3>SERVICES</h3>
           <ul>
-            <li><a href="#">Shredding</a></li>
-            <li><a href="#">Composting</a></li>
-            <li><a href="#">E-waste</a></li>
-            <li><a href="#">Waste Pick-Up</a></li>
-            <li><a href="#">Construction and Demolition Waste</a></li>
+            <li><a href="/services">Shredding</a></li>
+            <li><a href="/services">Composting</a></li>
+            <li><a href="/services">E-waste</a></li>
+            <li><a href="/services">Waste Pick-Up</a></li>
+            <li><a href="/services">Construction and Demolition Waste</a></li>
           </ul>
         </div>
         

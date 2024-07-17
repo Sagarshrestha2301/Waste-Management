@@ -42,7 +42,7 @@ const WhyWastix = () => {
 
   return (
     <>
-      <div className="why-khaalisisi">
+      <div className="why-wastix">
         <div className="header">
           <h1>Why Choose US?</h1>
         </div>
@@ -52,7 +52,7 @@ const WhyWastix = () => {
         <div className="content">
           <div className="illustration">
             <img
-              src="https://www.khaalisisi.com/public/frontend/img/ksf-why-khaalisisi.png"
+              src="../../public/assets/why.png"
               alt=" Character"
             />
           </div>

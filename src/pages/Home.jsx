@@ -8,11 +8,14 @@ import WhatWeBuy from "./WhatWeBuy";
 import WhyWastix from "./WhyWastix";
 import Testimonials from "../components/testimonials";
 
+
+
+
 const Home = () => {
   const navigate = useNavigate();
 
   const handleGetStarted = () => {
-    navigate('/login');
+    navigate('/RecyclingForm');
   };
 
   return (
