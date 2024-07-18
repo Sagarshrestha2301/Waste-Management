@@ -20,15 +20,15 @@ const Contact = () => {
               <h3 className="text-3xl font-bold mb-2">Contact with the team</h3>
               <p className="mb-6">Lorem ipsum dolor sit amet consectetur. Aliquet amet elementum.</p>
               <div className="contact-detail mb-4">
-                <p className="font-bold">Location</p>
+                <p className="font-bold">Location :</p>
                 <p>Kamaphokari</p>
               </div>
               <div className="contact-detail mb-4">
-                <p className="font-bold">Phone no</p>
+                <p className="font-bold">Phone no :</p>
                 <p>(+977) 9812345678</p>
               </div>
               <div className="contact-detail">
-                <p className="font-bold">Email</p>
+                <p className="font-bold">Email :</p>
                 <p>support@example.com</p>
               </div>
               <div className="map-container mb-4">
@@ -44,7 +44,7 @@ const Contact = () => {
               </div>
             </div>
             <div className="contact-form ">
-              <form className="max-w-md mx-auto shadow-box">
+              <form className="shadow-box">
                 <div className="mb-4">
                   <label htmlFor="name" className="block mb-2">Your Name</label>
                   <input type="text" id="name" className="w-full p-2 border rounded" required />

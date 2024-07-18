@@ -6,8 +6,8 @@
 .contact-header {
   position: relative;
   text-align: center;
-  color: black;
-  height: 200px;
+  color: #2C3E50;
+  height: 100px;
   background: url('/path-to-your-header-background-image.jpg') no-repeat center center;
   background-size: cover;
   overflow: hidden;
@@ -21,11 +21,14 @@
 
 .contact-header h1 {
   position: relative;
-  z-index: 1;
-  font-size: 3.5rem;
+  font-size: 30px;
   margin: 0;
-  padding-top: 100px;
+  padding-top: 30px;
   animation: slideInFromTop 1s ease-out;
+  font-weight: bold;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  transition: color 0.3s ease;
+  color: rgb(63, 60, 60);
 }
 
 @keyframes slideInFromTop {
@@ -79,6 +82,7 @@
   border-radius: 10px;
   overflow: hidden;
 }
+
 
 .contact-form {
   flex: 1;
