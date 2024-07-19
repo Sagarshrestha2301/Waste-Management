@@ -1,6 +1,6 @@
 import React, { useState } from "react";
+import axios from 'axios';
 import Header from "../components/Layout/Header";
-
 import "./RecyclingForm.css";
 
 const RecyclingForm = () => {
@@ -11,6 +11,7 @@ const RecyclingForm = () => {
     alternateNo: "",
     type: "Donate",
   });
+  const [submitStatus, setSubmitStatus] = useState(null);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -20,10 +21,23 @@ const RecyclingForm = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    // Handle form submission logic here
+    try {
+      const response = await axios.post('http://localhost:8080/api/recycling/submit', formData);
+      console.log("Form submitted:", response.data);
+      setSubmitStatus('success');
+      setFormData({
+        date: "",
+        time: "",
+        mobileNo: "",
+        alternateNo: "",
+        type: "Donate",
+      });
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      setSubmitStatus('error');
+    }
   };
 
   return (
@@ -144,6 +158,12 @@ const RecyclingForm = () => {
               Continue
             </button>
           </form>
+          {submitStatus === 'success' && (
+            <p className="success-message">Form submitted successfully!</p>
+          )}
+          {submitStatus === 'error' && (
+            <p className="error-message">Error submitting form. Please try again.</p>
+          )}
           <p className="call-us">Or, CALL US</p>
           <a href="tel:9812345678" className="phone-number">
             9812345678

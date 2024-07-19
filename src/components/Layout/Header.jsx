@@ -1,6 +1,9 @@
+// src/components/Layout/Header.js
+
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { FaHome, FaInfoCircle, FaCogs, FaBlog, FaEnvelope, FaSignInAlt, FaSignOutAlt } from 'react-icons/fa';
+import { FaHome, FaInfoCircle, FaCogs, FaBlog, FaEnvelope, FaSignOutAlt } from 'react-icons/fa';
+import { isUserLoggedIn, logoutUser } from '../../utils/auth';
 import './Header.css';
 
 const Header = () => {
@@ -12,7 +15,7 @@ const Header = () => {
   };
 
   const handleLogout = () => {
-    localStorage.removeItem('token');
+    logoutUser();
     navigate('/login');
   };
 
@@ -37,7 +40,7 @@ const Header = () => {
     };
   }, [isOpen]);
 
-  const isLoggedIn = !!localStorage.getItem('token');
+  const isLoggedIn = isUserLoggedIn();
 
   return (
     <nav className={isOpen ? 'nav-active' : ''}>
@@ -48,15 +51,15 @@ const Header = () => {
         <span></span>
       </div>
       <ul className={isOpen ? 'show' : ''}>
-        <li><Link to="/" onClick={toggleMenu}><FaHome />Home</Link></li>
-        <li><Link to="/About" onClick={toggleMenu}><FaInfoCircle />About</Link></li>
-        <li><Link to="/Services" onClick={toggleMenu}><FaCogs />Services</Link></li>
-        <li><Link to="/Blog" onClick={toggleMenu}><FaBlog />Blog</Link></li>
-        <li><Link to="/Contact" onClick={toggleMenu}><FaEnvelope />Contact</Link></li>
-        {isLoggedIn ? (
-          <li><button className="logout-button" onClick={handleLogout}><FaSignOutAlt />Logout</button></li>
-        ) : (
-          <li><Link to="/login" onClick={toggleMenu}><FaSignInAlt />Login</Link></li>
+        {isLoggedIn && (
+          <>
+            <li><Link to="/" onClick={toggleMenu}><FaHome />Home</Link></li>
+            <li><Link to="/About" onClick={toggleMenu}><FaInfoCircle />About</Link></li>
+            <li><Link to="/Services" onClick={toggleMenu}><FaCogs />Services</Link></li>
+            <li><Link to="/Blog" onClick={toggleMenu}><FaBlog />Blog</Link></li>
+            <li><Link to="/Contact" onClick={toggleMenu}><FaEnvelope />Contact</Link></li>
+            <li><button className="logout-button" onClick={handleLogout}><FaSignOutAlt />Logout</button></li>
+          </>
         )}
       </ul>
     </nav>

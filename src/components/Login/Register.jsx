@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
+import './Register.css'
 
 const Register = () => {
   const [formData, setFormData] = useState({
@@ -35,19 +36,51 @@ const Register = () => {
   };
 
   return (
-    <div>
-      <form onSubmit={onSubmit}>
-        <input type="text" name="username" value={username} onChange={onChange} placeholder="Username" required />
-        <input type="email" name="email" value={email} onChange={onChange} placeholder="Email" required />
-        <input type="password" name="password" value={password} onChange={onChange} placeholder="Password" required />
-        <button type="submit">Register</button>
-      </form>
-      {message && (
-        <div style={{ color: isError ? 'red' : 'green', marginTop: '10px' }}>
-          {message}
+    <>
+    <div className="register-page">
+      <div className="auth-container">
+        <div className="auth-form">
+          <h2>Register</h2>
+          <form onSubmit={onSubmit}>
+            <input 
+              type="text" 
+              name="username" 
+              value={username} 
+              onChange={onChange} 
+              placeholder="Username" 
+              required 
+            />
+            <input 
+              type="email" 
+              name="email" 
+              value={email} 
+              onChange={onChange} 
+              placeholder="Email" 
+              required 
+            />
+            <input 
+              type="password" 
+              name="password" 
+              value={password} 
+              onChange={onChange} 
+              placeholder="Password" 
+              required 
+            />
+            <button type="submit">Register</button>
+          </form>
+          {message && (
+            <div className={`message ${isError ? 'error' : 'success'}`}>
+              {message}
+            </div>
+          )}
+          <p>
+            Already have an account? <Link to="/login">Login</Link>
+          </p>
         </div>
-      )}
+      </div>
     </div>
+    </>
+
   );
 };
 

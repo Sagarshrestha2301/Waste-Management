@@ -1,10 +1,35 @@
-import React from 'react';
+import React, { useState } from 'react';
+import axios from 'axios';
 import Header from '../components/Layout/Header';
 import Footer from '../components/Layout/Footer';
 import './Contact.css';
 
-
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    subject: '',
+    message: ''
+  });
+  const [submitStatus, setSubmitStatus] = useState(null);
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.id]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await axios.post('http://localhost:8080/api/contact/submit', formData);
+      setSubmitStatus('success');
+      setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
+    } catch (error) {
+      setSubmitStatus('error');
+      console.error('Error submitting form:', error);
+    }
+  };
+
   return (
     <>
       <Header />
@@ -44,29 +69,70 @@ const Contact = () => {
               </div>
             </div>
             <div className="contact-form ">
-              <form className="shadow-box">
+              <form className="shadow-box" onSubmit={handleSubmit}>
                 <div className="mb-4">
                   <label htmlFor="name" className="block mb-2">Your Name</label>
-                  <input type="text" id="name" className="w-full p-2 border rounded" required />
+                  <input 
+                    type="text" 
+                    id="name" 
+                    className="w-full p-2 border rounded" 
+                    required 
+                    value={formData.name}
+                    onChange={handleChange}
+                  />
                 </div>
                 <div className="mb-4">
                   <label htmlFor="email" className="block mb-2">Your email</label>
-                  <input type="email" id="email" className="w-full p-2 border rounded" required />
+                  <input 
+                    type="email" 
+                    id="email" 
+                    className="w-full p-2 border rounded" 
+                    required 
+                    value={formData.email}
+                    onChange={handleChange}
+                  />
                 </div>
                 <div className="mb-4">
                   <label htmlFor="phone" className="block mb-2">Phone</label>
-                  <input type="text" id="phone" className="w-full p-2 border rounded" required />
+                  <input 
+                    type="text" 
+                    id="phone" 
+                    className="w-full p-2 border rounded" 
+                    required 
+                    value={formData.phone}
+                    onChange={handleChange}
+                  />
                 </div>
                 <div className="mb-4">
                   <label htmlFor="subject" className="block mb-2">Subject</label>
-                  <input type="text" id="subject" className="w-full p-2 border rounded" required />
+                  <input 
+                    type="text" 
+                    id="subject" 
+                    className="w-full p-2 border rounded" 
+                    required 
+                    value={formData.subject}
+                    onChange={handleChange}
+                  />
                 </div>
                 <div className="mb-4">
                   <label htmlFor="message" className="block mb-2">Message</label>
-                  <textarea id="message" rows="4" className="w-full p-2 border rounded" required></textarea>
+                  <textarea 
+                    id="message" 
+                    rows="4" 
+                    className="w-full p-2 border rounded" 
+                    required
+                    value={formData.message}
+                    onChange={handleChange}
+                  ></textarea>
                 </div>
                 <button type="submit" className="bg-green-500 text-white px-4 py-2 rounded">Send Message</button>
               </form>
+              {submitStatus === 'success' && (
+                <p className="text-green-500 mt-4">Message sent successfully!</p>
+              )}
+              {submitStatus === 'error' && (
+                <p className="text-red-500 mt-4">Error sending message. Please try again.</p>
+              )}
             </div>
           </div>
         </div>

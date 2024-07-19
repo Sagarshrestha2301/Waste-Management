@@ -1,7 +1,9 @@
+// src/components/Login/Login.js
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
-import "./Auth.css";
+import { loginUser } from '../../utils/auth';
+import "./Login.css";
 
 const Login = () => {
   const [formData, setFormData] = useState({
@@ -25,7 +27,7 @@ const Login = () => {
       const response = await axios.post("http://localhost:8080/api/auth/login", formData);
       console.log(response.data);
       const token = response.data.token;
-      localStorage.setItem("token", token);
+      loginUser(token);  // Use the loginUser function from auth.js
       setMessage("Login successful!");
       setTimeout(() => {
         navigate("/dashboard");
@@ -38,38 +40,43 @@ const Login = () => {
   };
 
   return (
-    <div className="auth-container">
-      <div className="auth-form">
-        <h2>Login</h2>
-        <form onSubmit={handleSubmit}>
-          <input
-            type="email"
-            name="email"
-            placeholder="Email"
-            value={email}
-            onChange={onChange}
-            required
-          />
-          <input
-            type="password"
-            name="password"
-            placeholder="Password"
-            value={password}
-            onChange={onChange}
-            required
-          />
-          <button type="submit">Login</button>
-        </form>
-        {message && (
-          <div style={{ color: isError ? 'red' : 'green', marginTop: '10px' }}>
-            {message}
+    <>
+      <div className="login-page">
+        <div className="auth-container">
+          <div className="auth-form">
+            <h2>Welcome Back!</h2>
+            <p>Please login to your account</p>
+            <form onSubmit={handleSubmit}>
+              <input
+                type="email"
+                name="email"
+                placeholder="Email"
+                value={email}
+                onChange={onChange}
+                required
+              />
+              <input
+                type="password"
+                name="password"
+                placeholder="Password"
+                value={password}
+                onChange={onChange}
+                required
+              />
+              <button type="submit">Login</button>
+            </form>
+            {message && (
+              <div className={`message ${isError ? 'error' : 'success'}`}>
+                {message}
+              </div>
+            )}
+            <p>
+              Don't have an account? <Link to="/register">Register</Link>
+            </p>
           </div>
-        )}
-        <p>
-          Don't have an account? <Link to="/register">Register</Link>
-        </p>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

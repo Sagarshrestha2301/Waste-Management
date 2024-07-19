@@ -1,7 +1,8 @@
 import React from 'react';
 import './ServicesPage.css';
-import Header from '../components/Layout/Header';
-import Footer from '../components/Layout/Footer';
+import Header from '../../components/Layout/Header';
+import Footer from '../../components/Layout/Footer';
+
 
 const ServicesPage = () => {
   const services = [
