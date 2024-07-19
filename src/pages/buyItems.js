@@ -7,49 +7,49 @@ export const items = [
   // Paper
   {
     name: "Newspaper",
-    image: "../../public/assets/newspaper.png",
+    image: "../../public/images/newspaper.png",
     price: "Est. Rs 30/Kgs",
     description: "What are you going to do with old news anyway",
     category: "Paper"
   },
   {
     name: "Magazines",
-    image: "../../public/assets/magazines.png",
+    image: "../../public/images/magazines.png",
     price: "Est. Rs 7/Kgs",
     description: "Even guests prefer new issues",
     category: "Paper"
   },
   {
     name: "Books & Magazine",
-    image: "../../public/assets/books.png",
+    image: "../../public/images/books.png",
     price: "Est. Rs 7/Kgs",
     description: "Give your book a new life",
     category: "Paper"
   },
   {
     name: "Cardboard",
-    image: "../../public/assets/cardboard.png",
+    image: "../../public/images/cardboard.png",
     price: "Est. Rs 6/Kgs",
     description: "Don't hoard the board",
     category: "Paper"
   },
   {
     name: "Copy",
-    image: "../../public/assets/copy.png",
+    image: "../../public/images/copy.png",
     price: "Est. Rs 12/Kgs",
     description: "Copy, paste, recycle",
     category: "Paper"
   },
   {
     name: "Egg crates",
-    image: "../../public/assets/egg crates.png",
+    image: "../../public/images/egg crates.png",
     price: "Est. Rs 5/Kgs",
     description: "Create new crates",
     category: "Paper"
   },
   {
     name: "Invitation Cards",
-    image: "../../public/assets/invitation cards.png",
+    image: "../../public/images/invitation cards.png",
     price: "Est. Rs 4/Kgs",
     description: "Invite the environment",
     category: "Paper"
@@ -58,35 +58,35 @@ export const items = [
   // Glass and Plastic
   {
     name: "Beer bottle",
-    image: "../../public/assets/beer bottle.png",
+    image: "../../public/images/beer bottle.png",
     price: "Est. Rs 1/Pcs",
     description: "Cheers to responsible drinking",
     category: "Glass and Plastic"
   },
   {
     name: "Liquor bootle",
-    image: "../../public/assets/liquor bottle.png",
+    image: "../../public/images/liquor bottle.png",
     price: "Est. Rs 0.25/Pcs",
     description: "Aged wine is good as long as there is liquor inside",
     category: "Glass and Plastic"
   },
   {
     name: "Disinfectants",
-    image: "../../public/assets/disinfectants.png",
+    image: "../../public/images/disinfectants.png",
     price: "Est. Rs 5/Kgs",
     description: "Time to clean up ... beyond your house",
     category: "Glass and Plastic"
   },
   {
     name: "Shampoo",
-    image: "../../public/assets/shampoo.png",
+    image: "../../public/images/shampoo.png",
     price: "Est. Rs 15/Kgs",
     description: "Wash away the waste",
     category: "Glass and Plastic"
   },
   {
     name: "Water & Pet bottle",
-    image: "../../public/assets/water bottle.png",
+    image: "../../public/images/water bottle.png",
     price: "Est. Rs 5/Kgs",
     description: "The planet is thirsty for recyclable waste",
     category: "Glass and Plastic"
@@ -95,42 +95,42 @@ export const items = [
   // Metal & Steel
   {
     name: "Aluminium",
-    image: "../../public/assets/aluminium.png",
+    image: "../../public/images/aluminium.png",
     price: "Est. Rs 140/Kgs",
     description: "Get more than Aalu and minimum",
     category: "Metal & Steel"
   },
   {
     name: "Soda & Beer cans",
-    image: "../../public/assets/Soda & Beer cans.png",
+    image: "../../public/images/Soda & Beer cans.png",
     price: "Est. Rs 150/Pcs",
     description: "Party hard, recycle harder",
     category: "Metal & Steel"
   },
   {
     name: "Steel furniture",
-    image: "../../public/assets/steel furniture.png",
+    image: "../../public/images/steel furniture.png",
     price: "Est. Rs 50/Kgs",
     description: "It's time to upgrade",
     category: "Metal & Steel"
   },
   {
     name: "Metals",
-    image: "../../public/assets/metals.png",
+    image: "../../public/images/metals.png",
     price: "Est. Rs Requires Inspection",
     description: "Metal matters",
     category: "Metal & Steel"
   },
   {
     name: "Metal",
-    image: "../../public/assets/metals.png",
+    image: "../../public/images/metals.png",
     price: "Est. Rs 40/Kgs",
     description: "Metal",
     category: "Metal & Steel"
   },
   {
     name: "Washing Machine",
-    image: "../../public/assets/washing machine.png",
+    image: "../../public/images/washing machine.png",
     price: "Est. Rs Requires Inspection",
     description: "Washing Machine",
     category: "Metal & Steel"
@@ -138,42 +138,42 @@ export const items = [
   // E-waste
   {
     name: "CDs",
-    image: "../../public/assets/cds.png",
+    image: "../../public/images/cds.png",
     price: "Est. Rs 20/Kgs",
     description: "Classic songs and movies are awesome ..not the CDs",
     category: "E-waste"
   },
   {
     name: "CPU & accessories",
-    image: "../../public/assets/cpu & accessories.png",
+    image: "../../public/images/cpu & accessories.png",
     price: "Est. Rs 50/Kgs",
     description: "Old is gold but not for CPUs",
     category: "E-waste"
   },
   {
     name: "Mobiles",
-    image: "../../public/assets/mobile.png",
+    image: "../../public/images/mobile.png",
     price: "Est. Rs 20/Kgs",
     description: "Hello! I need a new phone",
     category: "E-waste"
   },
   {
     name: "Television",
-    image: "../../public/assets/television.png",
+    image: "../../public/images/television.png",
     price: "Est. Rs 50/Kgs",
     description: "Time to upgrade to a smart TV",
     category: "E-waste"
   },
   {
     name: "Wires",
-    image: "../../public/assets/wires.png",
+    image: "../../public/images/wires.png",
     price: "Est. Rs 20/Kgs",
     description: "Wires are good for connection, not for hoarding",
     category: "E-waste"
   },
   {
     name: "Batteries",
-    image: "../../public/assets/batteries.png",
+    image: "../../public/images/batteries.png",
     price: "Est. Rs 20/Kgs",
     description: "Battery is not the only solution",
     category: "E-waste"
@@ -181,14 +181,14 @@ export const items = [
    // others
   {
     name: "Plastic",
-    image: "../../public/assets/plastic.png",
+    image: "../../public/images/plastic.png",
     price: "Est. Rs 5/Kgs",
     description: "Plastic",
     category: "Others"
   },
   {
     name: "Bubble Wrap",
-    image: "../../public/assets/bubble.png",
+    image: "../../public/images/bubble.png",
     price: "Est. Rs 3/Kgs",
     description: "Bubble Wrap",
     category: "Others"
@@ -197,7 +197,7 @@ export const items = [
   // Brass
   {
     name: "Brass",
-    image: "../../public/assets/brass.png",
+    image: "../../public/images/brass.png",
     price: "Est. Rs 100/Kgs",
     description: "Brass",
     category: "Brass"

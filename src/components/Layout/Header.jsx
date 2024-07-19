@@ -7,6 +7,7 @@ import { isUserLoggedIn, logoutUser } from '../../utils/auth';
 import './Header.css';
 
 const Header = () => {
+<<<<<<< HEAD
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
 
@@ -64,6 +65,23 @@ const Header = () => {
       </ul>
     </nav>
   );
+=======
+  return <>
+  
+    <nav>
+        <Link to="/"><img src="/images/logo.png" alt="logo" className="logo" /></Link>
+        <ul>
+          <li><Link to="/"><FaHome />Home</Link></li>
+          <li><Link to="/About"><FaInfoCircle />About</Link></li>
+          <li><Link to="/Services"><FaCogs />Services</Link></li>
+          <li><Link to="/Blog"><FaBlog />Blog</Link></li>
+          <li><Link to="/Contact"><FaEnvelope />Contact</Link></li>
+          <li><Link to="/Login"><FaSignInAlt />Login</Link></li>
+        </ul>
+      </nav>
+      
+  </>
+>>>>>>> 09c991903e72eb49457a42604e5709115422110e
 }
 
 export default Header;
