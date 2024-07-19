@@ -7,7 +7,7 @@ const Header = () => {
   return <>
   
     <nav>
-        <Link to="/"><img src="/assets/logo.png" alt="logo" className="logo" /></Link>
+        <Link to="/"><img src="/images/logo.png" alt="logo" className="logo" /></Link>
         <ul>
           <li><Link to="/"><FaHome />Home</Link></li>
           <li><Link to="/About"><FaInfoCircle />About</Link></li>

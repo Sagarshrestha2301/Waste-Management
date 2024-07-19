@@ -9,37 +9,37 @@ const Blog = () => {
     {
       title: "5 Ways to Reduce Waste in Kathmandu",
       excerpt: "Learn simple techniques to minimize waste in your daily life in Nepal's capital.",
-      image: "../../public/assets/kwm.jpg",
+      image: "../../public/images/kwm.jpg",
       date: "May 15, 2024"
     },
     {
       title: "The Impact of Plastic on Nepal's Rivers",
       excerpt: "Discover the long-term effects of plastic pollution on Nepal's waterways and what we can do about it.",
-      image: "../../public/assets/river-plastic.jpg",
+      image: "../../public/images/river-plastic.jpg",
       date: "June 2, 2024"
     },
     {
       title: "Upcycling: Nepali Artisans Turn Trash into Treasure",
       excerpt: "Explore how local artisans are repurposing waste materials into beautiful crafts.",
-      image: "../../public/assets/nepali-upcycling.jpg",
+      image: "../../public/images/nepali-upcycling.jpg",
       date: "June 20, 2024"
     },
     {
       title: "Community-led Recycling Initiatives in Pokhara",
       excerpt: "Learn about successful community recycling programs in Nepal's second-largest city.",
-      image: "../../public/assets/pokhara-recycling.jpeg",
+      image: "../../public/images/pokhara-recycling.jpeg",
       date: "July 5, 2024"
     },
     {
       title: "E-waste Management: A Growing Challenge in Nepal",
       excerpt: "Understand the rising issue of electronic waste and innovative solutions being implemented.",
-      image: "../../public/assets/cover.jpg",
+      image: "../../public/images/cover.jpg",
       date: "July 18, 2024"
     },
     {
       title: "Composting: A Sustainable Solution for Organic Waste",
       excerpt: "Discover how composting is helping Nepali communities reduce waste and improve agriculture.",
-      image: "../../public/assets/nepal-composting.jpg",
+      image: "../../public/images/nepal-composting.jpg",
       date: "August 1, 2024"
     }
   ];

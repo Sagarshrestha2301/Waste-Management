@@ -12,6 +12,16 @@ import Testimonials from "../components/testimonials";
 
 
 const Home = () => {
+
+  const [userName, setUserName] = useState('');
+
+  useEffect(() => {
+    const storedUserName = localStorage.getItem('userName');
+    if (storedUserName) {
+      setUserName(storedUserName);
+    }
+  }, []);
+
   const navigate = useNavigate();
 
   const handleGetStarted = () => {
@@ -20,6 +30,9 @@ const Home = () => {
 
   return (
     <>
+     <div className="container">
+      <h1>Welcome, {userName}!</h1>
+    </div>
       <div className="frontPage">
         <Header />
         <div className="welcome-content">

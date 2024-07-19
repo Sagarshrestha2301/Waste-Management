@@ -52,7 +52,7 @@ const WhyWastix = () => {
         <div className="content">
           <div className="illustration">
             <img
-              src="../../public/assets/why.png"
+              src="../../public/images/why.png"
               alt=" Character"
             />
           </div>
